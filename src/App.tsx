@@ -1,10 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Main, Repos, Files } from './pages';
+import { NavBar, PageWrapper } from './layouts'
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div>
-      Github search app
-    </div>
+    <BrowserRouter>
+      <NavBar />
+      <PageWrapper>
+        <Switch>
+          <Route component={Main} path="/" exact />
+          <Route component={Repos} path="/repos/:username" />
+          <Route component={Files} path="/files/:username/:repository" />
+        </Switch>
+      </PageWrapper>
+    </BrowserRouter>
   );
 }
 
