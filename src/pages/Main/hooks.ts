@@ -10,7 +10,7 @@ const useEffects = () => {
   }
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if(e.key === 'Enter'){
-      history.push(`repos/${userName}`)
+      history.push(`repos/${userName}`);
     }
   }
 

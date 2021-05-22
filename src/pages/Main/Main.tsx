@@ -5,7 +5,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import useEffects from './hooks';
 
 const Main: React.FC = () => {
-  const { userName, handleChange, handleKeyPress} = useEffects()
+  const { userName, handleChange, handleKeyPress} = useEffects();
   return (
     <>
       <TextField

@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Main, Repos, Files } from './pages';
-import { NavBar, PageWrapper } from './layouts'
+import { NavBar, PageWrapper } from './layouts';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <NavBar />
       <PageWrapper>
         <Switch>
@@ -14,7 +14,7 @@ const App: React.FC = () => {
           <Route component={Files} path="/files/:username/:repository" />
         </Switch>
       </PageWrapper>
-    </BrowserRouter>
+    </Router>
   );
 }
 
