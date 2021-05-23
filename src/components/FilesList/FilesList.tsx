@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   }
 });
 
-const FilesList: React.FC<FilesListProps> = ({ files= [] }) => {
+const FilesList: React.FC<FilesListProps> = ({ files }) => {
   const classes = useStyles();
   return (
     <List className={classes.root}>

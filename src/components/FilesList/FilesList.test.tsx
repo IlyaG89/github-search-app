@@ -4,7 +4,7 @@ import FilesList from './FilesList';
 
 const ITEMS_NUMBER = 10;
 const mockFiles = Array(ITEMS_NUMBER).fill(0).map((_, i) =>
-  ({ name: `file${i}`, type: 'file' }));
+  ({ name: `file${i}`, type: i > 5 ? 'file' : 'dir' }));
 
 describe('<FilesList />', () => {
   describe('render FilesList', () => {

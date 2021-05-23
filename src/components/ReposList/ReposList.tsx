@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ReposList: React.FC<ReposListProps> = ({ username = '', repos = [] }) => {
+const ReposList: React.FC<ReposListProps> = ({ username, repos }) => {
   const classes = useStyles();
   return (
     <List className={classes.root}>

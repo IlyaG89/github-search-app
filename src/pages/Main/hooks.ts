@@ -7,12 +7,13 @@ const useEffects = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUserName(e.target.value);
-  }
+  };
+
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if(e.key === 'Enter'){
+    if(e.key === 'Enter' && userName){
       history.push(`repos/${userName}`);
     }
-  }
+  };
 
   return {
     userName,

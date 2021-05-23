@@ -17,11 +17,11 @@ const useStyles = makeStyles({
   },
 });
 
-const ReadMeContent: React.FC<ReadMeContentProps> = ({ content = '' }) => {
+const ReadMeContent: React.FC<ReadMeContentProps> = ({ content }) => {
   const classes = useStyles();
   const ref = useRef(null);
   useEffect(() => {
-    if (ref.current) {
+    if (ref.current && content) {
       render(<ReactMarkdown remarkPlugins={[gfm]} children={content} />, ref.current);
     }
   }, [ref, content]);

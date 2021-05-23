@@ -8,7 +8,7 @@ import {
 } from '@material-ui/core';
 import GithubIcon from '@material-ui/icons/GitHub';
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   return (
     <AppBar position="static" style={{ minHeight: '5vh' }}>
       <Toolbar>
